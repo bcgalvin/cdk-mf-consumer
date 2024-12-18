@@ -9,7 +9,7 @@
 # Local History for Visual Studio Code
 .history/
 data/
-
+.metaflow/
 # System files
 .DS_Store
 Thumbs.db

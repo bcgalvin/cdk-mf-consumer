@@ -13,15 +13,13 @@ class HNIngestFlow(FlowSpec):
     
     BATCH_SIZE = 50
     RATE_LIMIT_DELAY = 0.5
+    OUTPUT_DIR = "data/raw"
     
-    output_dir = Parameter("output_dir",
-                          help="Base directory for output files",
-                          default="data/raw")
 
     @step
     def start(self):
         print("Starting HN data ingestion")
-        self.output_dir = Path(self.output_dir)
+        self.output_dir = Path(self.OUTPUT_DIR)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
         self.item_stats = {

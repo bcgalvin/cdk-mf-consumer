@@ -73,8 +73,7 @@ type = "virtual"
 installer = "uv"
 features = ["dev"]
 [tool.hatch.envs.default.scripts]
-run_ingest = "python -m cdk_mf_consumer.flows.ingest"
-run_update = "python -m cdk_mf_consumer.flows.update"
+ingest_flow = "python -m cdk_mf_consumer.flows.ingest run"
 
 [tool.hatch.envs.lint]
 type = "virtual"
