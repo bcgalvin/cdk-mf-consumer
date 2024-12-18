@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Annotated
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -15,7 +15,7 @@ class MaxItemResponse(BaseModel):
     
     id: PositiveInt = Field(..., description="Maximum item ID from HN API")
     timestamp: TZAwareDatetime = Field(
-        default_factory=lambda: datetime.now(tz=timezone.utc),
+        default_factory=lambda: datetime.now(tz=UTC),
         description="Timestamp when max ID was retrieved"
     )
 
