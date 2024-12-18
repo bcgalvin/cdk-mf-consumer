@@ -8,6 +8,7 @@
 
 # Local History for Visual Studio Code
 .history/
+data/
 
 # System files
 .DS_Store
